@@ -3,8 +3,13 @@ module.exports = (() => {
         return new Buffer(originalString).toString('base64');
     };
 
+    const reverseMe = (originalString) => {
+        return originalString.split('').reverse().join().replace(/,/g, '');
+    }
+
     return {
-        base64Encode
+        base64Encode,
+        reverseMe
     };
 
 })();
