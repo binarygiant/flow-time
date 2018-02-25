@@ -3,9 +3,9 @@ module.exports = (() => {
         return new Buffer(originalString).toString('base64');
     };
 
-    // product owner said we have to uppercase all reversed strings
+    // product owner said we have to lowercase all reversed strings
     const reverseMe = (originalString) => {
-        return originalString.split('').reverse().join().replace(/,/g, '').toUpperCase();
+        return originalString.split('').reverse().join().replace(/,/g, '').toLowerCase();
     };
 
     return {
